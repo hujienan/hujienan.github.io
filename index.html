@@ -10,23 +10,180 @@
             margin: 0;
             padding: 0;
         }
-       
+        body{
+            overflow:hidden;
+        }
+        #container{
+            position: relative;
+            top: 0;
+        }
+        .section1{
+            /*background: url(./pic/1.jpg) no-repeat center;*/
+            background: grey;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 798px;
+        }
+        .intro1{
+            width: 550px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            margin-left: -275px;
+           /* top: 250px;*/
+            top: 50px;
+
+            font-size: 46px;
+            text-align: center;
+            background: white;
+            line-height: 100px;
+            z-index: 2;
+            user-select: none;
+        }
+        .intro2{
+            border: 5px solid white;
+            width: 700px;
+            height: 120px;
+            position: absolute;
+            left: 50%;
+            margin-left: -350px;
+            z-index: 1;
+            /*top: 320px;*/
+            top: 520px;
+
+            font-size: 45px;
+            text-align: center;
+            line-height: 120px;
+            user-select: none;
+        }
+        .section2{
+            width: 100%;
+            height: 798px;
+            background: #333333;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 798px;
+        }
+        .section3{
+            width: 100%;
+            height: 798px;
+            background: #333366;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 1596px;
+        }
+        #navBar{
+            width: 100px;
+            height: 300px;
+            position: fixed;
+            top: 40%;
+            right: 10px;
+            z-index: 20;
+        }
+        #navBar p{
+            font-size: 20px;
+        }
+        #typing{
+            font-size: 25px;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <div id="header">
-        
-    </div>
-    <div id="main">
-        
-    </div>
-    <div id="footer">
-        
-    </div>
+    <div id="container">
 
+        <div class="section section1">
+            <div class="intro1">
+                Website of Jet Hu
+            </div>
+            <div class="intro2">
+                Now I am in AU!
+            </div>
+            
+        </div>
+
+        <div class="section section2">
+            <div class="textCon">
+                <p id="typing"></p>
+            </div>
+        </div> 
+        <div class="section section3">
+            <a href="./link.html">link</a>
+        </div>
+    </div>
+    
+    <div id="navBar">
+            <p>ABOUT ME</p>
+            <a class="contact_git" target="_blank" href="https://github.com/hujienan">github</a>
+            <a class="contact_mail" href="mailto:hujienanmoon@gmail.com">mail</a>
+        </div>
     <script>
-       
+        var secs = $(".section");
+        var index = 0;
+        var secLen = $(secs).length;
+        var startTop = 0;
+
+        
+        var autoType = function(){  
+            var sentences = "hello world!";
+            var len = sentences.length;
+            var end = 0
+            var timer = setInterval(function(){
+                end++;
+                var tempSen = sentences.substring(0, end);
+                $("#typing").html(tempSen);
+            },100);
+        }
+
+        $(document).ready(function(){
+            autoType();
+            $(".intro1").animate({top: "250px"});
+            $(".intro2").animate({top: "320px"});
+            var canRun  = true;
+            $(window).on('mousewheel', function(e){
+            if(!canRun){
+                return;
+            }
+            canRun = false;
+            if(e.originalEvent.wheelDelta / 120 >0){
+                if(index != 0){
+                    index--;
+                    startTop = startTop + 798;
+                    var reTop = startTop + 'px';
+                    $("#container").animate({top: reTop}, function(){
+                        if(index == 0){
+                            $(".intro1").animate({top: "250px"});
+                            $(".intro2").animate({top: "320px"});
+                        }    
+                    });
+                }
+            }else{
+                if(index != (secLen-1)){
+                    index++;
+                    startTop = startTop - 798;
+                    var reTop = startTop + 'px';
+                    $("#container").animate({top: reTop}, function(){
+                        if(index == 1){
+                            $(".intro1").css("top", "50px");
+                            $(".intro2").css("top", "520px");
+                        }
+                    });
+                    
+                }
+            }
+            setTimeout(function(){
+                canRun = true;
+            }, 2000);
+        });
+        });
+        
         
     </script>
+    <script src="./js/jquery-2.1.4.js"></script>
 </body>
 </html>
