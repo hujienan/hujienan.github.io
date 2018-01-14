@@ -22,8 +22,9 @@
             top: 0;
         }
         .section1{
-            /*background: url(./pic/1.jpg) no-repeat center;*/
-            background: #333333;
+            background: url("./pic/birds.jpg") center no-repeat;
+            background-size: cover;
+           /* background: #333333;*/
             overflow: hidden;
             position: absolute;
             left: 0;
@@ -37,9 +38,7 @@
             position: absolute;
             left: 50%;
             margin-left: -275px;
-           /* top: 250px;*/
             top: 50px;
-
             font-size: 46px;
             text-align: center;
             background: white;
@@ -66,7 +65,8 @@
         .section2{
             width: 100%;
             height: 798px;
-            background: #333333;
+            background: url("./pic/stars.jpg") center no-repeat;
+            background-size: cover;
             overflow: hidden;
             position: absolute;
             left: 0;
@@ -75,7 +75,8 @@
         .meIcon{
             width: 120px;
             height: 120px;
-            margin: 30px auto;
+            margin: 0 auto;
+            margin-top: 120px;
             overflow: hidden;
             border-radius: 50%;
             border: 3px solid white;
@@ -87,10 +88,33 @@
         .meIcon img{
             width: 120px;
             height: 140px;
+            padding-right: 6px;
             transition: all 0.5s ease-in-out;
             -webkit-transition: all 1s ease-in-out;
         }
-       
+        .textDiv{
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 70px;
+            border-top: 3px solid white;
+            padding:40px;
+        }
+        .typeP{
+            font-size: 25px;
+            color: white;
+            word-wrap:break-word;
+            text-align: center;
+            user-select: none;
+        }
+        @keyframes tail{
+            50%{
+                opacity: 0;
+            }
+        }
+        .tail{
+            font-weight: 900;
+            animation: tail 0.5s infinite;
+        }
         .section3{
             width: 100%;
             height: 798px;
@@ -104,10 +128,14 @@
             display: block;
             width: 150px;
             height: 150px;
-            margin: 100px auto;
+            margin: 150px auto;
             font-size: 24px;
             transform: rotate(45deg);
             background: white;
+            
+        }
+        .rotateLink:hover{
+            
         }
         .rotateLink p{
             text-align: center;
@@ -115,7 +143,21 @@
             transform:rotate(-45deg);
             font-weight: 800;
             font-size: 34px;
-
+            position: relative;
+        }
+        .rotateLink p:after{
+            content: "";
+            width: 0;
+            height: 3px;
+            background: #333333;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transition:  all 0.5s;
+        }
+        .rotateLink p:hover:after{
+            left: 0;
+            width: 100%;
         }
         .section4{
             width: 100%;
@@ -125,40 +167,91 @@
             position: absolute;
             left: 0;
             top: 2394px;
+            z-index: 1;
+        }
+        #showPic{
+            position: absolute;
+            width: 900px;
+            height: 600px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+        .arrow{
+            position: absolute;
+            width: 40px;
+            height: 50px;
+            top: 50%;
+            transform: translate(0, -50%);
+            cursor: pointer;
+        }
+        @keyframes leftMove{
+            50%{
+                left: -70px;
+            }
+        }
+        @keyframes rightMove{
+            50%{
+                right: -70px;
+            }
+        }
+        .leftArrow{
+            left: -50px;
+            animation: leftMove 1s infinite;
+        }
+        .rightArrow{
+            right: -50px;
+            animation: rightMove 1s infinite;   
+        }
+        .picItem{
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            display: none;
+            cursor: pointer;
+        }
+        #bottomTag{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            color: white;
+            font-style: italic;
+            font-size: 24px;
+        }
+        .selected{
+            display: inline-block;
         }
         #contactBar{
             width: 32px;
-            /*height: 300px;*/
             position: fixed;
             top: 50%;
             right: 30px;
             z-index: 20;
         }
-        .contact_git{
+        .contact{
             display: block;
-            background: url("./pic/github3.png") no-repeat;
+            background-size: cover;
             width: 32px;
             height: 32px;
             margin-bottom: 20px;
             transition: all 0.5s ease-in-out;
             -webkit-transition: all 0.5s ease-in-out; 
         }
-        .contact_git:hover{
+        .contact:hover{
             transform: ratate(-360deg) scale(1.5);
             -webkit-transform: rotate(-360deg) scale(1.5);
         }
-       /* .contact_linkedIn{
-            display: block;
-            background: url("./pic/linkedin1.png") no-repeat;
-            width: 100px;
-            height: 32px;
-            transition: all 0.5s ease-in-out;
-            -webkit-transition: all 0.5s ease-in-out; 
+        .contact_git{
+            background: url("./pic/gitIcon.png") no-repeat;
         }
-        .contact_linkedIn:hover{
-            transform: ratate(-360deg) scale(1.5);
-            -webkit-transform: rotate(-360deg) scale(1.5);
-        }*/
+        .contact_linkedIn{
+            background: url("./pic/linkedInIcon.png") no-repeat;   
+        }
+        .contact_email{
+            background: url("./pic/emailIcon.png") no-repeat;      
+        }
         #navBar{
             width: 100px;
             position: fixed;
@@ -167,32 +260,13 @@
             transform: translate( 0, -50% );
             z-index: 20;
         }
-        .textDiv{
-            width: 50%;
-            margin: 0 auto;
-            border-top: 3px solid white;
-            padding:30px;
-        }
-        .typeP{
-            font-size: 25px;
-            color: white;
-            word-wrap:break-word;
-            text-align: center;
-        }
-        @keyframes tail{
-            50%{
-                opacity: 0;
-            }
-        }
-        .tail{
-            font-weight: 900;
-            animation: tail 0.5s infinite;
-        }
+        
         a{
             text-decoration: none;
             color: #333333;
             
         }
+
     </style>
 </head>
 <body>
@@ -220,36 +294,45 @@
 
         <div class="section section3">
             <a href="./blog.html" class="blog rotateLink"><p>BLOG</p></a>
-            <a href="./photography.html" class="photos rotateLink"><p>PHOTOS</p></a>
+            <a href="./web resume.pdf" class="photos rotateLink" target="_blank"><p>RESUME</p></a>
         </div>
 
         <div class="section section4">
-            
+            <div id="showPic">
+                <img src="./pic/left.png" class="leftArrow arrow" alt="left">
+                <img src="./pic/slideOne.jpg" alt="slideOne" class="picItem selected">
+                <img src="./pic/slideTwo.jpg" alt="slideTwo" class="picItem">
+                <img src="./pic/slideThree.jpg" alt="slideThree" class="picItem">
+                <img src="./pic/right.png" class="rightArrow arrow" alt="left">
+            </div>
+            <p id="bottomTag">Copyright by Jet Hu</p>
         </div>
     </div>
     
     <div id="contactBar">
-            <a class="contact_git" target="_blank" href="https://github.com/hujienan"></a>
-             <!-- <a class="contact_linkedIn" href="https://www.linkedin.com/in/jethuinau/"></a> -->
-            <!-- <a class="contact_linkedIn" href="mailto:hujienanmoon@gmail.com"></a> -->
+            <a class="contact_git contact" target="_blank" href="https://github.com/hujienan"></a>
+            <a href="https://www.linkedin.com/in/jethuinau/" class="contact_linkedIn contact" target="_blank"></a>
+            <a href="mailto:hujienanmoon@gmail.com" class="contact_email contact" target="_blank"></a>
     </div>
     
     <div id="navBar">
-       
     </div>
+
     <script>
+
+
+
         var secs = $(".section");
         var index = 0;
         var secLen = $(secs).length; //get sections length
         
-
         //Canvas
         for(var i=0; i<secLen; i++ ){
             var eCan = document.createElement("canvas");
             $(eCan).css({"width":"100px","height":"50px"});
             var obj = eCan.getContext("2d");
             if(i==0){
-                obj.fillStyle = "black";
+                obj.fillStyle = "white";
                 obj.beginPath();
                 obj.arc(100,50,25,0,2*Math.PI);
                 obj.fill();
@@ -264,10 +347,11 @@
         }
 
 
-
+         
         //mousewheel
         var startTop = 0;
         $(document).ready(function(){
+            var slideHint = 0; //define when to start slideShow
             var typeHint = 0; //define when to auto type
             $(".intro1").animate({top: "250px"});
             $(".intro2").animate({top: "320px"});
@@ -278,7 +362,8 @@
             }
             canRun = false;
             //need to improve
-            if(e.originalEvent.wheelDelta / 120 >0){
+            if(e.deltaY>0){
+            // if(e.originalEvent.wheelDelta / 120 >0){
                 if(index != 0){
                     index--;
                     startTop = startTop + 798;
@@ -298,7 +383,7 @@
                     pre.beginPath();
                     pre.arc(100,50,20,0,2*Math.PI);
                     pre.stroke();
-                    cur.fillStyle = "black";
+                    cur.fillStyle = "white";
                     cur.beginPath();
                     cur.arc(100,50,25,0,2*Math.PI);
                     cur.fill();
@@ -313,14 +398,20 @@
                         if(index == 1){
                             $(".intro1").css("top", "50px");
                             $(".intro2").css("top", "520px");
-                        }
-                        if(typeHint == 0){
+                             if(typeHint == 0){
                             typeHint++;
                             setTimeout(function(){
                                 autoType();
                             }, 1000);
-
                         }
+                        }
+                        if(index == 3){
+                            if(slideHint == 0){
+                                slideHint++;
+                                slideShow();
+                            }    
+                        }
+                        
                     });
                     var next = $("canvas")[index-1].getContext("2d");
                     var cur = $("canvas")[index].getContext("2d");
@@ -331,7 +422,7 @@
                     next.beginPath();
                     next.arc(100,50,20,0,2*Math.PI);
                     next.stroke();
-                    cur.fillStyle = "black";
+                    cur.fillStyle = "white";
                     cur.beginPath();
                     cur.arc(100,50,25,0,2*Math.PI);
                     cur.fill();
@@ -342,10 +433,52 @@
             }, 2000);
         });
         });
-        
+        //slideShow
+        var slideTimer;
+        var imgItems = $(".picItem");
+        var imgIndex = 0;
+        var slideShow = function(){
+            slideTimer = setInterval(function(){
+                imgIndex++;
+                imgIndex=imgIndex%(imgItems.length);
+                for(var i=0; i<imgItems.length; i++){
+                    $(imgItems[i]).removeClass("selected");
+                }
+                $(imgItems[imgIndex]).addClass("selected");
+            },1000);
+        }
+        $("#showPic").mouseover(function(){
+                clearInterval(slideTimer);
+            });
+
+        $("#showPic").mouseout(function(){
+            slideShow();
+        })
+
+        var changeImg = function(index){
+            for(var i=0; i<imgItems.length; i++){
+                $(imgItems[i]).removeClass("selected");
+            }
+            $(imgItems[index]).addClass("selected");
+        }
+
+        $(".leftArrow").click(function(){
+            imgIndex--;
+            if(imgIndex == -1){
+                imgIndex = imgItems.length-1;
+            }
+            changeImg(imgIndex);
+        });
+        $(".rightArrow").click(function(){
+            imgIndex++;
+            if(imgIndex == imgItems.length){
+                imgIndex = 0;
+            }
+            changeImg(imgIndex);
+        });
         //auto typing
         var autoType = function(){  
-            var sentences = "As a highly-motivated, enthusiastic and responsible person who had 3 years’ web development experience, I love to study new technique, and I am keen on taking challenges. For I just settled in Perth after my graduation from China, if you can supply a suitable job to me, I will do my best for my employer.";
+            var sentences = "As a highly-motivated, enthusiastic and responsible person who had 3 years’ web development experience, I love to study new technique, and I am keen on taking challenges. I just settled in Perth after my graduation from China, if you can supply a suitable job to me, I will do my best for my employer.";
             var len = sentences.length;
             var end = 0;
             var timer = setInterval(function(){

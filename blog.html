@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <title>BLOG</title>
     <link rel="icon" href="./icon.png">
@@ -14,17 +15,74 @@
             box-sizing: border-box;
         }
         body{
-            overflow:hidden;
+            background: #FAFAFB;
+            font-family: Microsoft Yahei;
         }
+        
+		#container{
+			width: 50%;
+			margin: 0 auto;
+			padding: 3em;
+		}
+		.aP{
+			font-size: 3em;
+			color: #333333;
+		}
+		.articleList{
+			margin-top: 2.5em;
+			margin-left: 2em; 
+		}
+		.title{
+			font-size: 1.2em;
+			margin-bottom: 0.5em;
+			border-left: 0.1em solid #333333;
+			text-indent: 1em;
+		}
+		a{
+			text-decoration: none;
+			color: #333333;
+		}
+
+
+		#homeBtn{
+			position: fixed;
+    		top: 5em;
+    		left: 2em;
+    		width: 4em;
+    		height: 5em;
+    		background: url("./pic/home.png") no-repeat center;
+    		background-size: cover;
+    		cursor: pointer;
+    		transition: all 0.5s ease-in-out;
+		}
+		#homeBtn:hover{
+			transform: scale(1.2);
+		}
     </style>
 </head>
 <body>
 	<div id="container">
-		<div class="aricleList">
-			<div class="articleItem">
-				<span class="title"><a href="./articles/1_article.html">告别2017</a></span>
-			</div>
+		
+		<div class="articleHint">
+			<p class="aP">BLOG LIST</p>
 		</div>
+		<div class="articleList">
+			<p class="title"><a href="./articles/1_article.html">告别2017</a></p>
+			<p class="title"><a href="./articles/2_article.html">人生20年——二十岁生日感言</a></p>
+		</div>
+		
 	</div>
+
+	<div id="homeBtn">
+		
+	</div>
+
+	<script>
+		$(function(){
+			$("#homeBtn").click(function(){
+				window.location = "./index.html";
+			});
+		});
+	</script>
 </body>
 </html>
