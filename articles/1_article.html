@@ -5,65 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
 	<title>告别2017</title>
 	<link rel="icon" href="../icon.png">
-    <script src="../js/jquery-2.1.4.js"></script>
-    <style>
-    	*{
-    		margin: 0;
-    		padding: 0;
-    	}
-    	body{
-            background: #FAFAFB;
-            font-family: Microsoft Yahei;
-    	}
-    	#container{
-    		width: 50%;
-    		margin: 0 auto;
-    	}
-    	.name{
-    		font-size: 2.5em;
-    		margin-top: 2em;
-    		margin-bottom: 1em;
-    		font-weight: 900;
-    		text-align: center;
-    		/*font-family: STXingkai;*/
-    	}
-    	.content{
-			font-size: 1.1em;
-			text-indent: 2em;
-			margin-bottom: 1em;
-			/*font-family: STXingkai;*/
-    	}
-    	.timeTag{
-    		text-indent: 2em;
-    		font-size: 1em;
-    		margin-bottom: 20em;
-    		margin-top: 3em;
-    	}
-    	#backToList{
-    		position: fixed;
-    		top: 5em;
-    		left: 2em;
-    		width: 4em;
-    		height: 5em;
-    		background: url("../pic/home.png") no-repeat center;
-    		background-size: cover;
-    		cursor: pointer;
-    		transition: all 0.5s ease-in-out;
-    	}
-    	#backToList:hover{
-    		transform: rotate(-360deg);
-    	}
-    	#toTop{
-    		position: fixed;
-    		bottom: 3em;
-    		right: 2em;
-    		width: 3em;
-    		height: 3em;
-    		background: url("../pic/toTop.png") no-repeat center;
-    		background-size: cover;
-    		display: none;
-    	}
-    </style>
+	<link rel="stylesheet" href="../css/article.css">
 </head>
 <body>
 	<div id="container">
@@ -83,24 +25,7 @@
 	<div id="toTop">
 		
 	</div>
-	<script>
-		$(function(){
-			$(window).scroll(function(){
-				var scrValue = $(this).scrollTop();
-				if(scrValue >= 120){
-					$("#toTop").show();
-				}else{
-					$("#toTop").hide();
-				}
-			});
-			$("#toTop").click(function(){
-				$(window).scrollTop(0);
-			});
-			$("#backToList").click(function(){
-				window.location = "../blog.html";
-			});
-		})
-
-	</script>
+	<script src="../js/jquery-2.1.4.js"></script>
+	<script src="../js/article.js"></script>
 </body>
 </html>

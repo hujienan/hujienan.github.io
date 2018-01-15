@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background: #FAFAFB;
+    font-family: Microsoft Yahei;
+}
+
+#container{
+	width: 50%;
+	margin: 0 auto;
+	padding: 3em;
+}
+.aP{
+	font-size: 3em;
+	color: #333333;
+}
+.articleList{
+	margin-top: 2.5em;
+	margin-left: 2em; 
+}
+.title{
+	font-size: 1.2em;
+	margin-bottom: 0.5em;
+	border-left: 0.1em solid #333333;
+	text-indent: 1em;
+}
+
+a{
+	text-decoration: none;
+	color: #333333;
+	transition: all 0.1s ease-in-out;
+}
+a:hover{
+	font-weight: 900;
+}
+
+#homeBtn{
+	position: fixed;
+	top: 5em;
+	left: 2em;
+	width: 4em;
+	height: 5em;
+	background: url("../pic/home.png") no-repeat center;
+	background-size: cover;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+#homeBtn:hover{
+	transform: scale(1.2);
+}
