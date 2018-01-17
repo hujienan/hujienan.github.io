@@ -1,2 +1,2 @@
 # hujienan.github.io
-[My Web](https://www.google.com)
+[My Web](https://hujienan.github.io)
