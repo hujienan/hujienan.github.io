@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>For job</title>
+	<link rel="stylesheet" href="./bulma/css/bulma.css">
+	<link rel="stylesheet" href="./forJob.css">
+</head>
+<body>
+	<!-- navbar -->
+	<nav class="navbar navPadding">
+		<div class="container is-fluid">
+			<div class="navbar-brand">
+				<a href="#" class="navbar-item is-size-3 has-text-weight-bold navBarBrandColor">Company</a>
+			 	<div class="navbar-burger burger " data-target="navBarForJob">
+				 	<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<div id="navBarForJob" class="navbar-menu">
+				<div class="navbar-end">
+					<a class="navbar-item is-size-4 has-text-weight-bold navMenuA">About</a>
+					<a class="navbar-item is-size-4 has-text-weight-bold navMenuA">Products</a>
+					<a class="navbar-item is-size-4 has-text-weight-bold navMenuA">Contact</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- hero -->
+	<section class="hero is-large heroBackground">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<h1 class="title has-text-white heroTitle">
+					Lorem Ipsum
+				</h1>
+				<h2 class="subtitle has-text-white has-text-weight-bold heroSubtitle">
+					Lorem Ipsum
+				</h2>
+				<a href="#" class="button heroBtn has-text-weight-semibold" style="padding: 0 3rem; color: #F63EED;">button1</a><a href="#" class="button heroBtn heroBtn2 has-text-white has-text-weight-semibold" style="padding: 0 3rem; ">button2</a>
+
+			</div>
+		</div>
+	</section>
+	<!-- about us -->
+	<section class="section">
+		<div class="container is-fluid">
+			<h1 class="title has-text-weight-bold aboutTitle">About Us</h1>
+			<div class="columns is-8 is-variable">
+				<div class="column is-size-5 has-text-weight-semibold" >
+					<p>1.Describe the difference between padding & margin.</p>
+					<p>Padding is the area between Content and Border, and Margin is the area between border and other elements.</p>
+					
+				</div>
+				<div class="column is-size-5 has-text-weight-semibold">
+					<p>2.In your own words describe the CSS3 box model.</p>
+					<p>CSS3 box model is a model of HTML elements that means every HTML element is consisted of Content, Padding, Border and Margin. </p>	
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- gap -->
+	<div id="gapDiv"></div>
+	<!-- Product -->
+	<section class="section">
+		<div class="container is-fluid productOneContainer">
+			<div class="columns is-8 is-variable">
+				<div class="column is-two-thirds ">
+						<figure class="image is-2by1">
+							<img src="./img/1.jpg" alt="image" class="productImgRadius">
+						</figure>
+				</div>
+				<div class="column">
+						<h1 class="title has-text-weight-bold productTitle">Product One</h1>
+						<p class="has-text-weight-semibold is-size-5">3.How to vertically centre a h1 inside a div - extra points for less lines of CSS.</p>
+						<p class="is-size-6">
+							<code>
+								div{
+									height: 700px;
+									background: blue;
+									position: relative;
+								}
+								h1{
+									position: absolute;
+									top: 50%;
+									transform: translate(0, -50%);
+								}
+							</code>
+						</p>
+						<p class="has-text-centered"><a href="" class="button has-text-weight-semibold productActionBtn">Action</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="container is-fluid productTwoContainer">
+			<div class="columns is-8 is-variable">
+				<div class="column">
+						<h1 class="title has-text-weight-bold productTitle">Product Two</h1>
+						<p class="has-text-weight-semibold is-size-5">4.Explain how media queries work</p>
+						<p class="is-size-6">Media queries is worked by define different styles for defferent media types and devices. It can make the HTML pages more flexible.</p>
+						<p class="has-text-centered"><a href="" class="button has-text-weight-semibold productActionBtn" >Action</a></p>	
+				</div>
+				<div class="column is-two-thirds">
+					<figure class="image is-2by1">
+						<img src="./img/3.jpg" alt="image" class="productImgRadius">
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="container is-fluid productTwoContainerPhone" >
+			<div class="columns is-8 is-variable">
+				<div class="column is-two-thirds">
+					<figure class="image is-2by1">
+						<img src="./img/3.jpg" alt="image" class="productImgRadius">
+					</figure>
+				</div>
+				<div class="column">
+						<h1 class="title has-text-weight-bold productTitle" >Product Two</h1>
+						<p class="has-text-weight-semibold is-size-5">4.Explain how media queries work</p>
+						<p class="is-size-6">Media queries is worked by define different styles for defferent media types and devices. It can make the HTML pages more flexible.</p>
+						<p class="has-text-centered"><a href="" class="button has-text-weight-semibold productActionBtn">Action</a></p>	
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- contact us -->
+	<section class="section contactBackground">
+		<div id="contactUs">
+			<div class="container is-fluid">
+				<h1 class="title has-text-centered has-text-weight-bold contactTitle">Contact Us</h1>
+				<div class="field">
+					<div class="control">
+						<input type="text" class="input contactName" placeholder="Name">
+					</div>
+				</div>
+				<div class="field">
+					<div class="control">
+						<input type="email" class="input contactEmail" placeholder="Email">
+					</div>
+				</div>
+				<div class="field">
+					<div class="control">
+						<textarea class="textarea contactMessage" placeholder="Message"></textarea>
+					</div>
+				</div>
+				<div class="field">
+					<p class="contactSubmitP"><span class="button has-text-weight-semibold contactSubmitBtn">Submit</span></p>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	<!-- footer -->
+	<footer class="footer footerBackground">
+		<div class="container is-fluid">
+			<div class="columns footText">
+				<div class="column is-5 is-size-3 has-text-weight-bold">
+					<a href="#" class="footerCompany">Company</a>
+				</div>
+				<div class="column is-4 is-size-5 has-text-weight-semibold textColorBlack">
+					<p>123 Address steet</p>
+					<p>Suburb, 0000</p>
+					<p>State, Country</p>
+				</div>
+				<div class="column is-3 is-size-5 has-text-weight-semibold textColorBlack">
+					<p ><span class="has-text-weight-bold">P:</span> +614 12 345 678</p>
+					<p><span class="has-text-weight-bold">E:</span> email@address.com</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+	  	// Get all "navbar-burger" elements
+	  		var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+	 	// Check if there are any navbar burgers
+	 		if ($navbarBurgers.length > 0) {
+
+	    // Add a click event on each of them
+	    		$navbarBurgers.forEach(function ($el) {
+	      			$el.addEventListener('click', function () {
+	    // Get the target from the "data-target" attribute
+	        				var target = $el.dataset.target;
+	        				var $target = document.getElementById(target);
+	    // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+	        				$el.classList.toggle('is-active');
+	        				$target.classList.toggle('is-active');
+	      				});
+	    			});
+	  			}
+			});
+	</script>
+</body>
+</html>

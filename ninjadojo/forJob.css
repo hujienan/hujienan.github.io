@@ -1,0 +1,143 @@
+.navPadding{
+	padding: 1rem;
+}
+.navBarBrandColor{
+	color: #F0417B;
+}
+.navMenuA{
+	color: black; margin: 1rem;
+}
+.heroBackground{
+	background: linear-gradient(to right, #C216CF , #FCCB19);
+}
+.heroTitle{
+	font-size: 5rem;
+}
+.heroSubtitle{
+	font-size: 3rem;
+}
+.heroBtn{
+	display: block;
+	border-radius: 0.5rem;
+}
+.heroBtn2{
+	margin-top: 1rem;
+	background-color: transparent;
+}
+.aboutTitle{
+	color: #F63EED;
+	padding: 0;
+}
+#gapDiv{
+	background: linear-gradient(to right, #C216CF, #FCCB19);
+	height: 1rem;
+}
+.productOneContainer{
+	margin-bottom: 3.5rem;
+}
+.productImgRadius{
+	border-radius: 0.5rem;
+}
+.productTitle{
+	color: #F56FD4;
+	padding-bottom: 2rem;
+}
+.productActionBtn{
+	margin: 3rem auto;
+	padding: 0 3rem;
+	color: #F63EED; 
+	border-radius: 0.3rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	border:0.1rem solid #F63EED; ;
+	font-size: 1.5rem;
+}
+.productTwoContainer{
+		display: none;
+	}
+.productTwoContainerPhone{
+	display: block;
+}
+.contactBackground{
+	background: #F7F5FC;
+}
+.contactTitle{
+	color: #FF33FF;
+	padding: 0;
+}
+#contactUs {
+    background: white;
+}
+.contactName, .contactEmail{
+	height: 1.8rem;
+	line-height: 1.8rem;
+	font-size: 1.2rem;
+	border-radius: 0.3rem;
+}
+.contactMessage{
+	font-size: 1.2rem;
+	border-radius: 0.3rem;
+	resize:none;
+}
+.contactSubmitBtn{
+	margin: 1rem 0;
+	padding: 0 3rem;
+	color: white; 
+	border-radius: 0.3rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	background: #FF33FF;
+	font-size: 1.5rem;
+}
+.contactSubmitP{
+	text-align: center;
+}
+.footerBackground{
+	background: white;
+}
+.footerCompany{
+	color: #F0417B;
+}
+.textColorBlack{
+	color: black;
+}
+@media screen and (min-width: 480px) {
+	.heroBtn{
+		display: inline-block;
+    	border-radius: 0.3rem;
+    	height: 2.5rem;
+    	line-height: 2.5rem;
+    	border:0.1rem solid white;
+    	font-size: 1.5rem;
+	}
+	.heroBtn2{
+		margin-left: 4rem;
+		margin-top: 0;
+    	background-color: transparent;
+	}
+	.aboutTitle{
+		color: #F63EED;
+		padding-bottom: 2rem;
+	}
+	.productTwoContainer{
+		display: block;
+	}
+	.productTwoContainerPhone{
+		display: none;
+	}
+	#contactUs {
+        width: 40%;
+        margin: 1rem auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 0.3rem;
+        box-shadow: 0.3rem 0.3rem 0.3rem #F2E7F9 ;
+    }
+	.contactTitle{
+		color: #FF33FF;
+		padding: 2rem;
+	}
+	.contactSubmitP{
+		text-align: right;
+	}
+}
