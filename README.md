@@ -1,2 +1,2 @@
 # hujienan.github.io
-My web.（http://hujienan.github.io）
+[My Web]（http://hujienan.github.io）
