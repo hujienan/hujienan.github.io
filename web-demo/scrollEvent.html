@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll event</title>
+	<script src="./js/jquery-2.1.4.js"></script>
+	<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        @-webkit-keyframes scaled {
+            from {transform:scale(1);}
+            to {transform:scale(0.9);}
+        }
+        @keyframes scaled{
+            from {transform:scale(1);}
+            to {transform:scale(0.9);}
+        }
+        #header{
+            width: 100%;
+            height: 800px;
+            background: lightblue;
+        }
+        #main{
+            width: 100%;
+            height: 800px;
+            background: #3366ff;
+        }
+        #footer{
+            width: 100%;
+            height: 800px;
+            background: #262626;
+        }
+        #header, #main, #footer{
+            -webkit-animation: scaled 3s ease-in-out infinite;
+            animation: scaled 3s ease-in-out infinite;
+            /*-webkit-animation-name: scaled;
+            -webkit-animation-duration: 3s;
+            animation-name: scaled;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;*/
+        }
+    </style>
+</head>
+<body>
+	<div id="header">
+        
+    </div>
+    <div id="main">
+        
+    </div>
+    <div id="footer">
+        
+    </div>
+
+    <script>
+        //get window height
+        var windowHeight = $(window).height();
+        var headerHeight = $("#header").outerHeight(true);
+        var footerHeight = $("#footer").outerHeight(true);
+        var lastScrollTop = 0;
+        var divs = $("div");
+        var index = 0;
+        $(divs).hide();
+        $(divs[index]).show();
+        $(window).on('mousewheel', function(e){
+        if(e.originalEvent.wheelDelta /120 > 0) {
+            console.log('scrolling up !');
+            index = index - 1;
+            if(index == -1){
+                index = 2;
+            }
+        }else{
+            console.log('scrolling down !');
+            index = index + 1;
+            if(index == 3){
+                index = 0;
+            }
+
+        }
+        $(divs).hide();
+        $(divs[index]).show();
+    });
+    </script>
+</body>
+</html>

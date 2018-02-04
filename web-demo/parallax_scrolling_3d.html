@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>parallax scrolling</title>
+	<script src="./js/jquery-2.1.4.js"></script>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			height: 2000px;
+		}
+		.parallax{
+			background: purple;
+			height: 300px;
+			width: 100%;
+			position: absolute;
+			top: 500px;
+		}
+		.down{
+			height: 300px;
+			width: 100%;
+			background: black;
+			position: absolute;
+			top:100px;
+		}
+		.up{
+			height: 300px;
+			width: 100%;
+			background: blue;
+			position: absolute;
+			top: 900px;
+		}
+	</style>
+</head>
+<body>
+	<div class="down">
+		
+	</div>
+	<div class="parallax">
+		
+	</div>
+	<div class="up">
+		
+	</div>
+	
+	<script>
+		var back = $($(".down")[0]);
+		var center = $($(".parallax")[0]);
+		var front = $($(".up")[0]);
+		var backTop = parseInt($(back).css("top").replace(/px/,""));
+		var centerTop = parseInt($(center).css("top").replace(/px/,""));
+		var frontTop = parseInt($(front).css("top").replace(/px/,""));
+		$(window).scroll(function(){
+			var scrollTop = $(window).scrollTop();
+			$(back).css("top", backTop+scrollTop*.9+'px');
+			$(center).css("top", centerTop+scrollTop*.7+'px');
+			$(front).css("top", frontTop+scrollTop*.3+'px');
+		});
+	</script>
+</body>
+</html>
