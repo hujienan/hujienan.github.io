@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tree View</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<script type="text/x-template" id="item-template">
+		<div class="class-menu">
+			<div :style="indent" @click="toggleChildren"> {{ label }} </div>
+			<item
+				v-if="showChildren"
+				v-for="node in nodes"
+				:nodes="node.nodes"
+				:label="node.label"
+				:depth="depth + 1"
+			></item>
+		</div>
+	</script>
+
+	<div id="demo">
+		<item
+			:label="tree.label"
+			:nodes="tree.nodes"
+			:depth="0"
+		>
+			
+		</item>
+	</div>
+
+	<script>
+		var tree = {
+			label: 'root',
+			nodes: [
+				{
+					label: 'item1',
+					nodes: [
+						{
+							label: 'item1.1'
+						},
+						{
+							label: 'item1.2',
+							nodes: [
+								{
+									label: 'item1.2.1'
+								}
+							]
+						}
+					]
+				},
+				{
+					label: 'item2'
+				}
+			]
+		}
+
+		Vue.component('item', {
+			template: '#item-template',
+			data: function(){
+				return {
+					showChildren: false
+				}
+			},
+			props: {
+				label: Object,
+				nodes: Object,
+				depth: Number
+			},
+			computed: {
+				indent: function(){
+					return {
+						transform: `translate(${this.depth * 50}px)`
+					}
+				}
+			},
+			methods: {
+				toggleChildren: function(){
+					this.showChildren = !this.showChildren
+				}
+			}
+		})
+
+		var demo = new Vue({
+			el: '#demo',
+			data: {
+				tree
+			}
+		})
+	</script>
+</body>
+</html>
