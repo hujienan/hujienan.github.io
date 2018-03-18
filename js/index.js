@@ -21,6 +21,8 @@ for(var i=0; i<secLen; i++ ){
     $("#navBar").append(eCan);
 }
 
+var imgItems = $(".picItem");
+
 //mousewheel
 var startTop = 0;
 $(document).ready(function(){
@@ -74,6 +76,11 @@ $(document).ready(function(){
                     }, 1000);
                 }
                 }
+                if(index == 3){
+                    if(imgItems[0].getAttribute('src') === '') {
+                        imgItems[0].src = imgItems[0].getAttribute('data-src');
+                }
+                }
             });
             var next = $("canvas")[index-1].getContext("2d");
             var cur = $("canvas")[index].getContext("2d");
@@ -96,13 +103,16 @@ $(document).ready(function(){
 });
 });
 
-var imgItems = $(".picItem");
+
 var imgIndex = 0;
 $(imgItems[imgIndex]).show();
 
 var changeImg = function(index){
     for(var i=0; i<imgItems.length; i++){
         $(imgItems[i]).hide();
+    }
+    if(imgItems[index].getAttribute('src') === ""){
+        imgItems[index].src = imgItems[index].getAttribute('data-src');
     }
     $(imgItems[index]).show();
 }
@@ -138,3 +148,4 @@ var autoType = function(){
         }
     },100);
 }
+
