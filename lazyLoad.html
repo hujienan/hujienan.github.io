@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lazyLoad</title>
+	<style>
+		img{
+			height: 700px;
+			width: 700px;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<img src="" data-src="./pic/1.jpg" alt="loading">
+	<img src="" data-src="./pic/2.jpg" alt="loading">
+	<img src="" data-src="./pic/3.jpg" alt="loading">
+	<img src="" data-src="./pic/4.jpg" alt="loading">
+	<img src="" data-src="./pic/animal.jpg" alt="loading">
+	<img src="" data-src="./pic/birds.jpg" alt="loading">
+	<img src="" data-src="./pic/me.jpg" alt="loading">
+	<img src="" data-src="./pic/stars.jpg" alt="loading">
+	<img src="" data-src="./pic/slideOne.jpg" alt="loading">
+	<img src="" data-src="./pic/slideTwo.jpg" alt="loading">
+	<script>
+		function throttle(fn, delay, atleast) {
+	    var timeout = null,
+		startTime = new Date();
+	    return function() {
+		var curTime = new Date();
+		clearTimeout(timeout);
+		if(curTime - startTime >= atleast) {
+		    fn();
+		    startTime = curTime;
+		}else {
+		    timeout = setTimeout(fn, delay);
+		}
+	    }
+	}
+	function lazyload() {
+	    var images = document.getElementsByTagName('img');
+	    var len    = images.length;
+	    var n      = 0;      //存储图片加载到的位置，避免每次都从第一张图片开始遍历		
+	    return function() {
+		var seeHeight = document.documentElement.clientHeight;
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		for(var i = n; i < len; i++) {
+		    if(images[i].offsetTop < seeHeight + scrollTop) {
+		        if(images[i].getAttribute('src') === '') {
+			     images[i].src = images[i].getAttribute('data-src');
+		        }
+			n = n + 1;
+		     }
+		}
+	    }
+	}
+	var loadImages = lazyload();
+	loadImages();          //初始化首页的页面图片
+	window.addEventListener('scroll', throttle(loadImages, 500, 1000), false);
+	</script>
+</body>
+</html>
