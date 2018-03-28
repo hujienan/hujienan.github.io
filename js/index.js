@@ -133,7 +133,7 @@ $(".rightArrow").click(function(){
 });
 //auto typing
 var autoType = function(){  
-    var sentences = "As a highly-motivated, enthusiastic and responsible person who had 3 years’ web development experience, I love to study new technique, and I am keen on taking challenges. I just settled in Perth after my graduation from China, if you can supply a suitable job to me, I will do my best for my employer.";
+    var sentences = "As a highly-motivated, enthusiastic and responsible person who had 3 years’ web development experience, I love to study new technologies, and I am keen on taking challenges. With excellent communication skills, I can shorten the development time by 20% with teammates. Always be the active and useful person in company.";
     var len = sentences.length;
     var end = 0;
     var timer = setInterval(function(){
