@@ -2,27 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jet Hu</title>
     <link rel="icon" href="./icon.png">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <div id="container">
-
-        <div class="section section1">
+        
+        <div class="section">
+                
             <div class="intro1">
                 Website of Jet Hu 
             </div>
             <div class="intro2">
                 Now I am in AU!
             </div>
-            
+            <img src="./pic/down.png" alt="down" class="downArrow">
         </div>
 
-        <div class="section section2">
+        <div class="section">
             <div class="meIcon">
-                <img src="./pic/me.jpg" alt="me">
+                <img data-src="./pic/me.jpg" alt="me" src="">
             </div>
             
             <div class="textDiv">
@@ -30,12 +32,12 @@
             </div>
         </div> 
 
-        <div class="section section3">
+        <div class="section">
             <a href="./blog.html" class="blog rotateLink"><p>BLOG</p></a>
             <a href="./web resume.pdf" class="photos rotateLink" target="_blank"><p>RESUME</p></a>
         </div>
 
-        <div class="section section4">
+        <div class="section">
             <div id="showPic">
                 <img src="./pic/left.png" class="leftArrow arrow" alt="left">
                 <img data-src="./pic/slideOne.jpg" alt="slideOne" class="picItem" src="">
@@ -45,12 +47,21 @@
                 <img data-src="./pic/slideFive.jpg" alt="slideFive" class="picItem" src="">
                 <img src="./pic/right.png" class="rightArrow arrow" alt="left">
             </div>
+            <div id="contactDetail">
+                <a href="https://github.com/hujienan" class="contact_git" target="_blank"></a>
+                <a href="https://www.linkedin.com/in/jethuinau/" class="contact_linkedIn " target="_blank"></a>
+                <a href="mailto:hujienanmoon@gmail.com" class="contact_email" target="_blank"></a>
+            </div>
+            <div id="contactHint">
+                <span class="openContact"></span>
+                <span class="closeContact"></span>
+            </div>
             <p id="bottomTag">Copyright by Jet Hu</p>
         </div>
     </div>
     
     <div id="contactBar">
-            <a class="contact_git contact" target="_blank" href="https://github.com/hujienan"></a>
+            <a href="https://github.com/hujienan" class="contact_git contact" target="_blank"></a>
             <a href="https://www.linkedin.com/in/jethuinau/" class="contact_linkedIn contact" target="_blank"></a>
             <a href="mailto:hujienanmoon@gmail.com" class="contact_email contact" target="_blank"></a>
     </div>
@@ -59,7 +70,8 @@
     </div>
 
     <script src="./js/jquery-2.1.4.js"></script>
-    <script src="./js/index.js"></script>
     <script src="./js/jquery.mousewheel.js"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

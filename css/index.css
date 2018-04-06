@@ -5,6 +5,9 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+html, body{
+    height: 100%;
+}
 body{
     overflow:hidden;
 }
@@ -12,83 +15,63 @@ body{
     position: relative;
     top: 0;
 }
-.section1{
+
+.section{
     background: #333333;
     overflow: hidden;
     position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: 798px;
 }
 .intro1{
-    width: 550px;
-    height: 100px;
     position: absolute;
     left: 50%;
-    margin-left: -275px;
-    top: 50px;
-    font-size: 46px;
+    margin-left: -17%;
     text-align: center;
     background: white;
     color: #333333;
-    line-height: 100px;
     z-index: 2;
     user-select: none;
 }
 .intro2{
-    border: 5px solid white;
-    width: 700px;
-    height: 120px;
+    border: 0 solid white;
     position: absolute;
     left: 50%;
-    margin-left: -350px;
+    margin-left: -22%;
     z-index: 1;
-    top: 520px;
     color: white;
-    font-size: 45px;
     text-align: center;
-    line-height: 120px;
     user-select: none;
 }
-.section2{
-    width: 100%;
-    height: 798px;
-    background: #333333;
-    overflow: hidden;
+.downArrow{
     position: absolute;
-    left: 0;
-    top: 798px;
+    bottom: 1%;
+    left: 50%;
+    animation: toDown 1s ease-in-out infinite;
+}
+@keyframes toDown{
+    50%{
+        bottom: 2%;
+    }
 }
 .meIcon{
-    width: 120px;
-    height: 120px;
     margin: 0 auto;
-    margin-top: 120px;
     overflow: hidden;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 0 solid white;
 }
 .meIcon:hover img{
     transform: ratate(360deg);
     -webkit-transform: rotate(360deg);
 }
 .meIcon img{
-    width: 120px;
-    height: 140px;
-    padding-right: 6px;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 1s ease-in-out;
 }
 .textDiv{
-    width: 50%;
     margin: 0 auto;
-    margin-top: 70px;
-    border-top: 3px solid white;
-    padding:40px;
+    border-top: 0 solid white;
 }
 .typeP{
-    font-size: 25px;
     color: white;
     word-wrap:break-word;
     text-align: center;
@@ -103,37 +86,25 @@ body{
     font-weight: 900;
     animation: tail 0.5s infinite;
 }
-.section3{
-    width: 100%;
-    height: 798px;
-    background: #333333;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    top: 1596px;
-}
+
 .rotateLink{
     display: block;
-    width: 150px;
-    height: 150px;
-    margin: 150px auto;
-    font-size: 24px;
+    margin: 0 auto;
     transform: rotate(45deg);
     background: white;
     color: #333333;
 }
 .rotateLink p{
     text-align: center;
-    line-height: 150px;
     transform:rotate(-45deg);
     font-weight: 800;
-    font-size: 34px;
     position: relative;
+    overflow: hidden;
 }
 .rotateLink p:after{
     content: "";
     width: 0;
-    height: 3px;
+    height: 3%;
     background: #333333;
     position: absolute;
     top: 70%;
@@ -144,84 +115,77 @@ body{
     left: 0;
     width: 100%;
 }
-.section4{
-    width: 100%;
-    height: 798px;
-    background: #333333;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    top: 2394px;
-    z-index: 1;
-}
 #showPic{
     position: relative;
-    width: 900px;
-    height: 600px;
     margin:0 auto;
-    margin-top: 100px;
     z-index: 10;
 }
 .arrow{
     position: absolute;
-    width: 40px;
-    height: 50px;
+    width: 5%;
+    height: 10%;
     top: 50%;
     transform: translate(0, -50%);
     cursor: pointer;
 }
 @keyframes leftMove{
     50%{
-        left: -110px;
+        left: -13%;
     }
 }
 @keyframes rightMove{
     50%{
-        right: -110px;
+        right: -13%;
     }
 }
 .leftArrow{
-    left: -100px;
+    left: -10%;
     animation: leftMove 1s infinite;
 }
 .rightArrow{
-    right: -100px;
+    right: -10%;
     animation: rightMove 1s infinite;   
 }
 .picItem{
     height: 100%;
     width: 100%;
-    border-radius: 10px;
     display: none;
     cursor: pointer;
-    transition: all 1s ease-in-out;
+    /* transition: all 1s ease-in-out; */
 }
-.picItem:hover{
-    transform: scale(1.1);
-}
+
 #bottomTag{
     position: absolute;
     bottom: 3%;
-    left: 50%;
-    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
     color: white;
     font-style: italic;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 #contactBar{
-    width: 32px;
     position: fixed;
     top: 50%;
-    right: 30px;
     z-index: 20;
+}
+#contactDetail{
+    z-index: 10;
+    position: absolute;
+}
+#contactHint{
+    z-index: 10;
+    position: absolute;
+}
+.openContact{
+    background: url("../pic/add.png") no-repeat;
+}
+.closeContact{
+    background: url("../pic/close.png") no-repeat;
 }
 .contact{
     display: block;
     background-size: cover;
-    width: 32px;
-    height: 32px;
-    margin-bottom: 20px;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out; 
 }
