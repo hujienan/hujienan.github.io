@@ -1,21 +1,24 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 html, body{
     height: 100%;
+}
+html{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
 body{
     overflow:hidden;
 }
 #container{
     position: relative;
-    top: 0;
 }
-
 .section{
     background: #333333;
     overflow: hidden;
@@ -25,7 +28,6 @@ body{
 .intro1{
     position: absolute;
     left: 50%;
-    margin-left: -17%;
     text-align: center;
     background: white;
     color: #333333;
@@ -36,7 +38,6 @@ body{
     border: 0 solid white;
     position: absolute;
     left: 50%;
-    margin-left: -22%;
     z-index: 1;
     color: white;
     text-align: center;
@@ -47,6 +48,8 @@ body{
     bottom: 1%;
     left: 50%;
     animation: toDown 1s ease-in-out infinite;
+    -webkit-animation: toDown 1s ease-in-out infinite;
+    -moz-animation: toDown 1s ease-in-out infinite;
 }
 @keyframes toDown{
     50%{
@@ -59,13 +62,39 @@ body{
     border-radius: 50%;
     border: 0 solid white;
 }
-.meIcon:hover img{
-    transform: ratate(360deg);
-    -webkit-transform: rotate(360deg);
-}
-.meIcon img{
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
+/* just for computer device */
+@media (max-width: 3000px) and (min-width: 1200px) and (max-height: 2500px) and (min-height: 740px){
+    .meIcon:hover img{
+        transform: ratate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+    .meIcon img{
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out; 
+    }
+    .rotateLink p:after{
+        content: "";
+        width: 0;
+        height: 3%;
+        background: #333333;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+    }
+    .rotateLink p:hover:after{
+        left: 0;
+        width: 100%;
+    }
+    .contact:hover{
+        transform: ratate(-360deg) scale(1.5);
+        -webkit-transform: rotate(-360deg) scale(1.5);
+        -moz-transform: rotate(-360deg) scale(1.5);
+    }
 }
 .textDiv{
     margin: 0 auto;
@@ -85,35 +114,27 @@ body{
 .tail{
     font-weight: 900;
     animation: tail 0.5s infinite;
+    -webkit-animation: tail 0.5s infinite;
+    -moz-animation: tail 0.5s infinite;
 }
 
 .rotateLink{
     display: block;
     margin: 0 auto;
-    transform: rotate(45deg);
     background: white;
     color: #333333;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
 }
 .rotateLink p{
     text-align: center;
-    transform:rotate(-45deg);
     font-weight: 800;
     position: relative;
     overflow: hidden;
-}
-.rotateLink p:after{
-    content: "";
-    width: 0;
-    height: 3%;
-    background: #333333;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transition:  all 0.5s;
-}
-.rotateLink p:hover:after{
-    left: 0;
-    width: 100%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
 }
 #showPic{
     position: relative;
@@ -125,8 +146,10 @@ body{
     width: 5%;
     height: 10%;
     top: 50%;
-    transform: translate(0, -50%);
     cursor: pointer;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
 }
 @keyframes leftMove{
     50%{
@@ -141,19 +164,21 @@ body{
 .leftArrow{
     left: -10%;
     animation: leftMove 1s infinite;
+    -webkit-animation: leftMove 1s infinite;
+    -moz-animation: leftMove 1s infinite;
 }
 .rightArrow{
     right: -10%;
-    animation: rightMove 1s infinite;   
+    animation: rightMove 1s infinite;
+    -webkit-animation: rightMove 1s infinite; 
+    -moz-animation: rightMove 1s infinite;    
 }
 .picItem{
     height: 100%;
     width: 100%;
     display: none;
     cursor: pointer;
-    /* transition: all 1s ease-in-out; */
 }
-
 #bottomTag{
     position: absolute;
     bottom: 3%;
@@ -163,7 +188,6 @@ body{
     font-style: italic;
     font-size: 1.5rem;
 }
-
 #contactBar{
     position: fixed;
     top: 50%;
@@ -187,12 +211,10 @@ body{
     display: block;
     background-size: cover;
     transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out; 
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out; 
 }
-.contact:hover{
-    transform: ratate(-360deg) scale(1.5);
-    -webkit-transform: rotate(-360deg) scale(1.5);
-}
+
 .contact_git{
     background: url("../pic/gitIcon.png") no-repeat;
 }
@@ -207,8 +229,10 @@ body{
     position: fixed;
     top: 50%;
     left: 10px;
-    transform: translate( 0, -50% );
     z-index: 20;
+    transform: translate( 0, -50% );
+    -webkit-transform: translate( 0, -50% );
+    -moz-transform: translate( 0, -50% );
 }
 a{
     text-decoration: none;
