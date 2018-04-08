@@ -1,55 +1,67 @@
 *{
     margin: 0;
-    padding: 0;
+	padding: 0;
+	box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 body{
-    background: #FAFAFB;
+    background: #333333;
     font-family: Microsoft Yahei;
 }
-
-#container{
-	width: 50%;
-	margin: 0 auto;
-	padding: 3em;
+/* for mobile */
+@media (max-width: 1200px) and (max-height: 1400px){
+	#container{
+		width: 90%;
+		margin: 1rem auto;
+	}
+	#homeBtn{
+		display: none;
+	}
 }
-.aP{
-	font-size: 3em;
-	color: #333333;
+@media (min-width: 1200px), (min-height: 1400px){
+	#container{
+		width: 50%;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+	a:hover{
+		font-weight: 900;
+	}
+	#homeBtn{
+		position: fixed;
+		color: #333333;
+		top: 5%;
+		left: 5%;
+		font-weight: 900;
+	}
+	#homeBtn span{
+		width: 5rem;
+		height: 5rem;
+		font-size: 4rem;
+		display: block;
+		text-align: center;
+		line-height: 5rem;
+		background: white;
+		border-radius: 2.5rem;
+		border-color: #333333;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+	}
+}
+.pageHeader{
+	font-size: 3rem;
+	color: white;
 }
 .articleList{
-	margin-top: 2.5em;
-	margin-left: 2em; 
+	margin-top: 2rem;
 }
-.title{
-	font-size: 1.2em;
-	margin-bottom: 0.5em;
-	border-left: 0.1em solid #333333;
-	text-indent: 1em;
-}
-
 a{
 	text-decoration: none;
-	color: #333333;
-	transition: all 0.1s ease-in-out;
+	color: white;
+	transition: all 0.2s ease-in-out;
 }
-a:hover{
-	font-weight: 900;
-}
-
-#homeBtn{
-	position: fixed;
-	top: 5em;
-	left: 2em;
-	width: 4em;
-	height: 5em;
-	background: url("../pic/home.png") no-repeat center;
-	background-size: cover;
-	cursor: pointer;
-	transition: all 0.5s ease-in-out;
-}
-#homeBtn:hover{
-	transform: scale(1.2);
+.title{
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
 }

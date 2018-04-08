@@ -8,9 +8,8 @@ $(function(){
 		}
 	});
 	$("#toTop").click(function(){
-		$(window).scrollTop(0);
-	});
-	$("#backToList").click(function(){
-		window.location = "../blog.html";
+		$("html").animate({
+			scrollTop: 0
+		}, 'fast');
 	});
 })
