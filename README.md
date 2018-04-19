@@ -1,5 +1,5 @@
 Introduction
 ======
 
-You can click [here](http://hujienan.github.io/) to see online page on **any** device.
+You can click [here](http://hujienan.github.io/) on **any** device to see online page.
 
