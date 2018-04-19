@@ -1,6 +1,5 @@
 Introduction
 ======
 
-If you browse by computer, you can check [here](http://hujienan.github.io/), then you can see more effects based on PC in **JavaScript**.
+You can click [here](http://hujienan.github.io/) to see online page on **any** device.
 
-If you browse by mobile end, you can check [here](http://hujienan.github.io/forJob/forJob.html). 
