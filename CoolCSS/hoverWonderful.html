@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hover wonderful</title>
+	<style>
+		div{
+			position: relative;
+			width: 200px;
+			height: 60px;
+			line-height: 60px;
+			font-size: 32px;
+			cursor: pointer;
+			color: #333;
+			text-align: center;
+			transition: color .5s;
+			margin: 20px;
+		}
+		div::before{
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 200px;
+			height: 60px;
+			background: deeppink;
+			z-index: -1;
+			transform: scaleX(0);
+			transform-origin: 100% 0;
+			transition: transform .5s;
+		}
+		.target1:hover{
+			color: #fff;
+		}
+		.target1:hover::before{
+			transform: scaleX(1);
+			transform-origin: 0% 0;
+			transition-timing-function: ease-in;
+		}
+
+		.target2::before{
+			transform: scale(0,0);
+			transform-origin: 100% 100%;
+		}
+		.target2:hover{
+			color: #fff;
+		}
+		.target2:hover::before{
+			transform: scale(1,1);
+			transform-origin: 0 0;
+		}
+		.target3::before{
+			transform: scale(0,0);
+			transform-origin: 50% 100%;
+		}
+		.target3:hover{
+			color: #fff;
+		}
+		.target3:hover::before{
+			transform: scale(1,1);
+			transform-origin: 50% 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="target1">Hover Me</div>
+	<div class="target2">Hover Me</div>
+	<div class="target3">Hover Me</div>
+</body>
+</html>
