@@ -427,9 +427,9 @@ $(function(){
             $("#typing").html(tempSen);
                 if(end == len){
                     clearInterval(timer);
-                    // setTimeout(function(){
-                    //     $(".tail").hide();
-                    // },1500);
+                    setTimeout(function(){
+                        $(".tail").hide();
+                    },1500);
                 }
             },100);
         }
