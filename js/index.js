@@ -417,39 +417,41 @@ $(function(){
         return w*x + 'px';
     }
     
-    var autoType = function(){
-        var sentences = "As a highly-motivated, enthusiastic and responsible person who had 3 years’ web development experience, I love to study new technologies, and I am keen on taking challenges. With excellent communication skills, I can shorten the development time by 20% with teammates. Always be the active and useful person in company.";
-        var len = sentences.length;
-        var end = 0;
-        var timer = setInterval(function(){
-            end++;
-            var tempSen = sentences.substring(0, end);
-            $("#typing").html(tempSen);
-                if(end == len){
-                    clearInterval(timer);
-                    setTimeout(function(){
-                        $(".tail").hide();
-                    },1500);
-                }
-            },100);
-        }
-
-    // var sentences = "As a highly-motivated, enthusiastic and responsible person who had 3 years’ web development experience, I love to study new technologies, and I am keen on taking challenges. With excellent communication skills, I can shorten the development time by 20% with teammates. Always be the active and useful person in company.";
-    // var len = sentences.length;
-    // var end = 0;
-    // var tempSen = '';
-    // var autoType = function(){  
-    //     tempSen = sentences.substring(0, end);
-    //     $("#typing").html(tempSen);
-    //     if(end == len){
-    //         setTimeout(function(){
-    //         $(".tail").remove();
-    //         },1500)
-    //     }else{
+    // var autoType = function(){
+    //     var sentences = "As a highly-motivated, enthusiastic and responsible person who had 3 years’ web development experience, I love to study new technologies, and I am keen on taking challenges. With excellent communication skills, I can shorten the development time by 20% with teammates. Always be the active and useful person in company.";
+    //     var len = sentences.length;
+    //     var end = 0;
+    //     var timer = setInterval(function(){
     //         end++;
-    //         setTimeout(autoType, 100)
+    //         var tempSen = sentences.substring(0, end);
+    //         $("#typing").html(tempSen);
+    //             if(end == len){
+    //                 clearInterval(timer);
+    //                 setTimeout(function(){
+    //                     $(".tail").hide();
+    //                 },1500);
+    //             }
+    //         },100);
     //     }
-    // }
+
+    var sentences = "As a highly-motivated, enthusiastic and responsible person who had 3 years’ web development experience, I love to study new technologies, and I am keen on taking challenges. With excellent communication skills, I can shorten the development time by 20% with teammates. Always be the active and useful person in company.";
+    var len = sentences.length;
+    var end = 0;
+    var tempSen = '';
+    function autoType(){  
+        tempSen = sentences.substring(0, end);
+        var dest = $("#typing")[0];
+        dest.innerHTML = tempSen;
+        // $("#typing").html(tempSen);
+        if(end == len){
+            setTimeout(function(){
+            $(".tail").remove();
+            },1500)
+        }else{
+            end++;
+            setTimeout(autoType, 100);
+        }
+    }
     //repaint navBar
     function repaint(index, direction){
         //down
