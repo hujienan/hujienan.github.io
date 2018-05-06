@@ -416,7 +416,7 @@ $(function(){
     function setByW(x){
         return w*x + 'px';
     }
-    $(".tail").remove();
+    
     var autoType = function(){
         var sentences = "As a highly-motivated, enthusiastic and responsible person who had 3 years’ web development experience, I love to study new technologies, and I am keen on taking challenges. With excellent communication skills, I can shorten the development time by 20% with teammates. Always be the active and useful person in company.";
         var len = sentences.length;
