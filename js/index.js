@@ -278,7 +278,7 @@ $(function(){
             "padding": setByH(0.015),
             "border-top-width": setByH(0.005)
         });
-        $(".typeP").css("font-size", setByH(0.031));
+        $(".typeP").css("font-size", setByH(0.025));
         //section3
         $(".rotateLink").css({
             "width": setByH(0.2),
@@ -434,7 +434,7 @@ $(function(){
     //         },100);
     //     }
 
-    var sentences = "As a highly-motivated, enthusiastic and responsible person who had 3 years’ web development experience, I love to study new technologies, and I am keen on taking challenges. With excellent communication skills, I can shorten the development time by 20% with teammates. Always be the active and useful person in company.";
+    var sentences = "An enthusiastic developer with 3 years of commercial experience developing in a full stack environment including, but not limited to JavaScript and PHP. Highly passionate about modern technology and keen on self-development, recently working on some exciting projects developing in ReactJS and Vue.js (example of code can be found on my GitHub account: https://github.com/hujienan). Proven ability to reduce delivery of development deadlines by 20%.";
     var len = sentences.length;
     var end = 0;
     var tempSen = '';
