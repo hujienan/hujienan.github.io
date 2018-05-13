@@ -1,7 +1,11 @@
 // window.onload = init;
+var isPlay = false;
 
 $("body").click(function(){
-	init()
+	if(!isPlay){
+		isPlay = !isPlay;
+		init();
+	}
 })
 function init(){
 	var boy = BoyWalk();
