@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Test</title>
+	<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+	<div class="header">
+		<div class="headerLeft">
+			<div class="logo">
+				<a href="#">
+					<img src="./headerLogo.png" alt="logo">
+				</a>
+			</div>	
+		</div>
+		
+		<div class="headerRight">
+			<span class="telephone">0412 427 865</span>
+			<a href="#" id="menuIcon">Ξ</a>
+			<div class="headerMenu">
+				<ul>
+					<li class="headerLink">
+						<a href="#"><span>link1</span></a>
+					</li><li class="headerLink">
+						<a href="#"><span>link2</span></a>
+					</li><li class="headerLink">
+						<a href="#"><span>link3</span></a>
+					</li><li class="headerLink">
+						<a href="#"><span>link4</span></a>
+					</li>
+				</ul>
+			</div>	
+		</div>
+		
+	</div>
+
+	<div class="main">
+		<div class="mainImg">
+			<img src="./fullImg.webp" alt="main image">
+		</div>
+		<div class="mainContent">
+			<h1>This is title</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ex excepturi, neque? Beatae fugit illum blanditiis sequi saepe, explicabo dolorum odio nesciunt recusandae aperiam illo, commodi quam quas quia minima?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ullam neque repellendus, maxime inventore officia repudiandae a, minus ipsam blanditiis nam dolor beatae delectus repellat nobis alias dolorum odit commodi?</p>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footerWrapper">
+			<div class="footerMenu">
+				<ul>
+					<li class="footerLink">
+						<a href="#"><span>link1</span></a>
+					</li><li class="footerLink">
+						<a href="#"><span>link2</span></a>
+					</li><li class="footerLink">
+						<a href="#"><span>link3</span></a>
+					</li><li class="footerLink">
+						<a href="#"><span>link4</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="endText">
+				<p>This is end text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam ratione nisi quasi praesentium unde! Veritatis facere consequatur delectus doloribus ea distinctio, ut suscipit necessitatibus aliquid vel reiciendis, nisi, neque, esse!</p>
+			</div>
+		</div>
+	</div>
+
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+	crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			$("#menuIcon").click(function(){
+				if($("#menuIcon").is(":visible")){
+					$(".headerMenu").toggle(300);
+				}
+			})
+			$(window).resize(function(){
+				if(!$("#menuIcon").is(":visible")){
+					$(".headerMenu").css("display", "");
+				}
+			})
+		})
+	</script>
+</body>
+</html>

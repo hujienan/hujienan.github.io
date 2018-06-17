@@ -1,0 +1,232 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+.header{
+	width: 100%;
+	background-color: #3B5E55;
+}
+.headerLeft{
+	display: inline-block;
+	width: 20%;
+	margin-left: 4%;
+}
+.logo{
+	width: 100%;
+	height: 6rem;
+	line-height: 6rem;
+	outline: none;
+	margin: 2rem auto;
+}
+.logo img{
+	max-width: 100%;
+	height: 6rem;
+	vertical-align: text-bottom;
+}
+.headerRight{
+	float: right;
+	text-align: right;
+	width: 50%;
+	margin-right: 4%;
+	margin-top: 2rem;
+}
+.telephone{
+	float: right;
+	height: 3rem;
+	color: white;
+	font-size: 1.5rem;
+	line-height: 3rem;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.telephone::before{
+	content: "Ph";
+	margin-right: 0.5rem;
+}
+.telephone:hover{
+	color: #09083B;
+}
+
+.headerMenu{
+	float: right;
+	width: 90%;
+	margin-top: 1rem;
+	font-size: 1.5rem;
+}
+.headerLink{
+	display: inline-block;
+	width: 20%;
+	height: 2rem;
+	line-height: 2rem;
+	background-color: #09083B;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.headerLink:hover{
+	background-color: white;
+}
+.headerLink:hover a{
+	color: #09083B;
+}
+.headerLink span{
+	display: inline-block;
+	width: 100%;
+}
+#menuIcon{
+	display: none;
+	color: white;
+	font-weight: bold;
+	font-size: 2rem;
+	height: 3rem;
+	line-height: 3rem;
+	padding: 0 0.5rem;
+	cursor: pointer;
+	font-family: arial;
+}
+#menuIcon:hover{
+	color: #8C8CA1;
+}
+
+.main{
+	width: 100%;
+	background-color: #384765;
+}
+.mainImg{
+	width: 100%;
+	overflow: hidden;
+}
+.mainImg img{
+	max-width: 100%;
+	height: auto;
+	margin-bottom: -25%;
+	outline: none;
+}
+.mainContent{
+	width: 80%;
+	margin: 0 auto;
+	padding: 1rem;
+	color: white;
+}
+.mainContent h1{
+	text-align: center;
+	font-size: 3rem;
+	padding-bottom: 1rem;
+}
+.mainContent p{
+	padding-bottom: 1rem;
+	font-size: 1.5rem;
+}
+.footer{
+	width: 100%;
+	padding: 1rem;
+	background-color: #509BCD;
+	color: white;
+}
+.footerWrapper{
+	width: 65%;
+	margin: 0 auto;
+}
+.footerMenu{
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+.footerLink{
+	display: inline-block;
+	width: 25%;
+	height: 2rem;
+	line-height: 2rem;
+	border-bottom: 0.1rem solid white;
+	background-color: #09083B;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.footerLink:hover{
+	background-color: white;
+}
+.footerLink:hover a{
+	color: #09083B;
+}
+.footerLink span{
+	display: inline-block;
+	width: 100%;
+}
+.endText{
+	width: 100%;
+	margin-bottom: 2rem;
+}
+.endText p{
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+	.header{
+		text-align: center;
+	}
+	.headerLeft{
+		width: 80%;
+		margin-left: 0;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.logo{
+		margin: 1rem auto;
+	}
+	.headerRight{
+		float: none;
+		position: relative;
+		width: 80%;
+		margin-top: 0;
+		margin-right: 0;
+		margin: 0 auto;
+		text-align: left;
+	}
+	.telephone{
+		float: none;
+	}
+	.headerMenu {
+		display: none;
+		position: absolute;
+		margin-top: 0;
+		right: 0;
+		width: 100%;
+	}
+	.headerLink{
+		width: 50%;
+	}
+	.footerLink{
+		width: 50%;
+	}
+	#menuIcon{
+		display: inline-block;
+		float: right;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.headerLink{
+		width: 100%;
+	}
+	.footerLink{
+		width: 100%;
+	}
+	.mainContent{
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 285px){
+	#menuIcon{
+		float: none;
+		display: inline-block;
+	}
+}
