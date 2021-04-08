@@ -434,7 +434,7 @@ $(function(){
     //         },100);
     //     }
 
-    var sentences = "An enthusiastic developer with 3 years of commercial experience developing in a full stack environment including, but not limited to JavaScript and PHP. Highly passionate about modern technology and keen on self-development, recently working on some exciting projects developing in ReactJS and Vue.js (example of code can be found on my GitHub account: https://github.com/hujienan). Proven ability to reduce delivery of development deadlines by 20%.";
+    var sentences = "An enthusiastic developer with 6 years of commercial experience developing in a full stack environment including, but not limited to JavaScript, PHP, and Python. Highly passionate about modern technology and keen on self-development. Proven ability to reduce delivery of development deadlines by 20%.";
     var len = sentences.length;
     var end = 0;
     var tempSen = '';
