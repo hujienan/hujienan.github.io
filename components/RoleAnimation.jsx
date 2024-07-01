@@ -10,7 +10,7 @@ const RoleAnimation = ({ ...props }) => {
 
   useEffect(() => {
     const animateRole = () => {
-      const roles = ["Developer", "Photographer", "Poet", "Chef"];
+      const roles = ["Software Engineer", "Photographer", "Poet", "Chef"];
       const role = roles[currentRoleIndex];
       let newText = "";
 

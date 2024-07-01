@@ -13,7 +13,7 @@ export default function Home() {
       <div className="h-screen relative">
         <div className="h-full flex justify-center items-center">
           <div className="">
-            <h1 className=" text-6xl lg:text-8xl font-bold">
+            <h1 className=" text-7xl lg:text-9xl font-bold">
               <span className="bg-gradient-to-tr from-blue-500 via- to-sky-500 bg-clip-text text-transparent">
                 Jet
               </span>{" "}
@@ -49,8 +49,8 @@ export default function Home() {
           </h2>
           <div className="prose-lg">
             <p>
-              Hi, I&apos;m Jet Hu, an enthusiastic lead full-stack developer
-              with 9 years of commercial experience.
+              Hi, I&apos;m Jet Hu, an enthusiastic lead full-stack engineer with
+              9 years of commercial experience.
             </p>
             <p>
               My expertise spans a full stack environment, including JavaScript,
@@ -103,7 +103,7 @@ export default function Home() {
               <span className=" absolute w-4 h-4 bg-blue-500 rounded-full -left-6 top-0"></span>
               <p className=" text-blue-500 font-bold">October 2018 – Present</p>
               <p>SafeSoft Ltd</p>
-              <p>Lead Full Stack Developer</p>
+              <p>Lead Full Stack Engineer</p>
               <div className=" flex mb-2 ">
                 <LocationIcon className=" w-6 h-6" />
                 <span>Perth, Australia</span>
