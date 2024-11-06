@@ -110,22 +110,29 @@ export default function Home() {
               </div>
               <ul className="list-disc pl-5">
                 <li>
-                  Prototyped project from scratch, determined technology stack,
-                  and built development lifecycle infrastructure. Led the
-                  analysis of requirements and development of the entire system.
+                  Architected and prototyped project from scratch, determined
+                  technology stack, and built development lifecycle
+                  infrastructure to support scalable growth and efficient
+                  deployment, leveraging Cloud (SaaS, PaaS, and IaaS) services.
                 </li>
                 <li>
-                  Implemented Banking API and ASIC API to build a
-                  subscription-included payment system and enable the system
-                  with share registry and share trading-related abilities.
+                  Led requirements analysis and managed full system development,
+                  ensuring alignment with business objectives and strategic.
                 </li>
                 <li>
-                  Developed marketplace sub-system, increasing traffic by 200%
-                  in 1 week through customized promotion content.
+                  Integrated Banking API and ASIC API to build a
+                  subscription-included payment system, enabling secure and
+                  scalable functionalities for share registry and trading.
                 </li>
                 <li>
-                  Successfully launched vcex.com.au 2 months ahead of the
-                  deadline.
+                  Designed and developed customisable marketplace subsystem that
+                  empowered clients to tailor promotional content, resulting in
+                  a 200% increase in traffic within one week.
+                </li>
+                <li>
+                  Successfully launched vcex.com.au 2 months ahead of schedule
+                  by optimising development workflows through DevOps practices
+                  and improving project prioritisation.
                 </li>
               </ul>
             </div>
@@ -142,9 +149,9 @@ export default function Home() {
               </div>
               <ul className="list-disc pl-5">
                 <li>
-                  Quickly familiarized with project code and personnel,
-                  efficiently resolved software issues, and completed project
-                  release one week ahead of schedule.
+                  Quickly familiarised with project code and team, efficiently
+                  resolved software issues in collaboration with the team, and
+                  completed the project release one week ahead of schedule.
                 </li>
               </ul>
             </div>
@@ -154,15 +161,15 @@ export default function Home() {
                 June 2018 – August 2018
               </p>
               <p>Colosoul Group Inc</p>
-              <p>Web Developer (Volunteer)</p>
+              <p>Web Developer</p>
               <div className=" flex mb-2">
                 <LocationIcon className=" w-6 h-6" />
                 <span>Perth, Australia</span>
               </div>
               <ul className="list-disc pl-5">
                 <li>
-                  Collaborated closely with the team leader to develop a
-                  WordPress theme with a new design.
+                  Worked closely with the team leader, developed the WordPress
+                  theme with a new design.
                 </li>
               </ul>
             </div>
@@ -172,27 +179,24 @@ export default function Home() {
                 May 2016 – October 2016
               </p>
               <p>Hithink Flush Information Network Co Ltd</p>
-              <p>PHP Web Developer (Paid Internship)</p>
+              <p>PHP Web Developer</p>
               <div className=" flex mb-2">
                 <LocationIcon className=" w-6 h-6" />
                 <span>Hangzhou, China</span>
               </div>
               <ul className="list-disc pl-5">
                 <li>
-                  Monitored comments keywords web project, automatically
-                  notifying related persons via email and SMS when keywords were
-                  detected according to pre-set rules. Increased user
-                  satisfaction by 15%.
+                  Developed a monitoring project for keyword comments that
+                  automatically notified relevant individuals by email and SMS,
+                  increasing user satisfaction by 15%.
                 </li>
                 <li>
-                  Developed an advertisement configuration web project to
-                  streamline the process for the advertising department,
-                  resulting in a 35% time savings.
+                  Simplified advertisement configuration for different client
+                  devices, saving 35% of time.
                 </li>
                 <li>
-                  Led the stock&apos;s information dynamic analysis project,
-                  providing better information services to special clients
-                  through dynamic analysis of stocks.
+                  Conducted dynamic analysis of stocks, providing enhanced
+                  information services to special clients.
                 </li>
               </ul>
             </div>
@@ -207,10 +211,8 @@ export default function Home() {
               </div>
               <ul className="list-disc pl-5">
                 <li>
-                  Led a team to engineer the construction management system,
-                  utilizing excellent communication skills and task assignment
-                  abilities to shorten development time by 20%. This resulted in
-                  a 12% cost savings for clients using the system.
+                  Led the construction management system project, reducing
+                  development time by 20% and helping clients save 12% in costs.
                 </li>
               </ul>
             </div>
@@ -226,7 +228,7 @@ export default function Home() {
               <ul className="list-disc pl-5">
                 <li>
                   Designed and coded a products presentation web project,
-                  resulting in a 40% increase in products visibility.
+                  increasing product visibility by 40%.
                 </li>
               </ul>
             </div>
