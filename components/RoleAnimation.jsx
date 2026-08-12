@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "./RoleAnimation.module.scss";
+import styles from "./RoleAnimation.module.css";
 
 const RoleAnimation = ({ ...props }) => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);

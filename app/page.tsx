@@ -14,10 +14,10 @@ export default function Home() {
         <div className="h-full flex justify-center items-center">
           <div className="">
             <h1 className=" text-7xl lg:text-9xl font-bold">
-              <span className="bg-gradient-to-tr from-blue-500 via- to-sky-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-tr from-blue-500 to-sky-500 bg-clip-text text-transparent">
                 Jet
               </span>{" "}
-              <span className="bg-gradient-to-br from-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-br from-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">
                 Hu
               </span>
             </h1>
