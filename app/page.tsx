@@ -49,19 +49,20 @@ export default function Home() {
           </h2>
           <div className="prose-lg">
             <p>
-              Hi, I&apos;m Jet Hu, an enthusiastic lead full-stack engineer with
-              9 years of commercial experience.
+              Hi, I&apos;m Jet Hu, a senior full-stack engineer with more than
+              10 years of commercial experience designing and building
+              production software.
             </p>
             <p>
-              My expertise spans a full stack environment, including JavaScript,
-              PHP, and Python, among other technologies. I&apos;m highly
-              passionate about modern technology and am constantly seeking
-              opportunities for self-development.
+              I enjoy taking complex product and engineering problems from idea
+              through architecture, user experience, implementation, and into
+              production.
             </p>
             <p>
-              I take pride in my proven ability to reduce delivery deadlines by
-              20%, showcasing my commitment to efficiency and excellence in
-              every project I undertake.
+              My recent work focuses on TypeScript, React, Next.js, Node.js,
+              PostgreSQL, and cloud platforms. Over the years, I’ve also built
+              production systems using PHP and Python, with experience spanning
+              SaaS, payments, integrations, and event-driven systems.
             </p>
           </div>
         </div>
@@ -69,7 +70,42 @@ export default function Home() {
       <div className=" mb-60 px-4">
         <div className=" max-w-2xl mx-auto">
           <h2 className=" uppercase font-bold text-blue-500 mb-10 text-xl">
-            upupstudy
+            Tickeasy
+          </h2>
+          <div className="prose-lg">
+            <p>
+              I&apos;m the founder and engineer behind{" "}
+              <a
+                href="https://tickeasy.com.au"
+                className=" text-blue-500 underline"
+              >
+                Tickeasy
+              </a>
+              , an Australian event ticketing and operations platform built to
+              empower event organisers with greater control, clarity, and
+              confidence throughout the entire event lifecycle.
+            </p>
+
+            <p>
+              From event creation and ticketing to payments, check-in, audience
+              management, and reserved seating, I&apos;ve designed and built the
+              platform end-to-end with a focus on creating a modern, intuitive
+              experience for both organisers and attendees.
+            </p>
+
+            <p>
+              Building Tickeasy has brought together product thinking, user
+              experience, software architecture, frontend and backend
+              engineering, cloud infrastructure, and direct feedback from real
+              organisers into a product that continues to evolve.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className=" mb-60 px-4">
+        <div className=" max-w-2xl mx-auto">
+          <h2 className=" uppercase font-bold text-blue-500 mb-10 text-xl">
+            Previous project
           </h2>
           <div className="prose-lg">
             <p>
@@ -77,18 +113,12 @@ export default function Home() {
                 href="https://upupstudy.com.au"
                 className=" text-blue-500 underline"
               >
-                UpUpStudy.com.au
+                UpUpStudy
               </a>{" "}
-              is a cutting-edge online education platform that I&apos;ve
-              personally created. It&apos;s dedicated to connecting learners and
-              tutors, offering a seamless digital space for education.
-            </p>
-            <p>
-              At UpUpStudy, we believe in the transformative power of knowledge.
-              We&apos;re here to connect learners and tutors, enabling a world
-              of endless possibilities. Whether you&apos;re eager to explore new
-              horizons or share your expertise, our platform is your gateway to
-              success.
+              is an online education platform I designed and built to connect
+              learners with tutors. The project gave me hands-on experience
+              building a marketplace-style product from concept through
+              frontend, backend, and deployment.
             </p>
           </div>
         </div>
@@ -101,38 +131,74 @@ export default function Home() {
           <div className=" border-l-2 ml-4 p-4 flex gap-16 flex-col border-zinc-600">
             <div className="relative ">
               <span className=" absolute w-4 h-4 bg-blue-500 rounded-full -left-6 top-0"></span>
-              <p className=" text-blue-500 font-bold">October 2018 – Present</p>
-              <p>SafeSoft Ltd</p>
-              <p>Lead Full Stack Engineer</p>
+
+              <p className=" text-blue-500 font-bold">January 2026 – Present</p>
+
+              <p>Tickeasy Pty Ltd</p>
+
+              <p>Founder & Full-Stack Engineer</p>
+
               <div className=" flex mb-2 ">
                 <LocationIcon className=" w-6 h-6" />
                 <span>Perth, Australia</span>
               </div>
-              <ul className="list-disc pl-5">
+
+              <p>
+                Founder and full-stack engineer building and operating an event
+                ticketing and operations platform supporting organiser
+                workflows, ticket sales, attendee management, and event
+                operations.
+              </p>
+
+              <ul className="list-disc pl-5 mt-2">
                 <li>
-                  Architected and prototyped project from scratch, determined
-                  technology stack, and built development lifecycle
-                  infrastructure to support scalable growth and efficient
-                  deployment, leveraging Cloud (SaaS, PaaS, and IaaS) services.
+                  Built the production platform end-to-end, covering event
+                  management, ticketing, payments, check-in, and reserved
+                  seating.
                 </li>
                 <li>
-                  Led requirements analysis and managed full system development,
-                  ensuring alignment with business objectives and strategic.
+                  Designed payment, inventory, and concurrency workflows
+                  supporting real-world ticket sales and organiser operations.
                 </li>
                 <li>
-                  Integrated Banking API and ASIC API to build a
-                  subscription-included payment system, enabling secure and
-                  scalable functionalities for share registry and trading.
+                  Operate the platform across product development,
+                  infrastructure, deployments, and ongoing reliability.
+                </li>
+              </ul>
+            </div>
+            <div className="relative ">
+              <span className=" absolute w-4 h-4 bg-blue-500 rounded-full -left-6 top-0"></span>
+              <p className=" text-blue-500 font-bold">
+                October 2018 – January 2026
+              </p>
+
+              <p>SafeSoft Ltd</p>
+              <p>Lead Full Stack Engineer</p>
+
+              <div className=" flex mb-2 ">
+                <LocationIcon className=" w-6 h-6" />
+                <span>Perth, Australia</span>
+              </div>
+
+              <p>
+                Technical lead and system architect for VCEX, a fintech platform
+                supporting share registry management, capital raising, and share
+                trading workflows for unlisted companies.
+              </p>
+
+              <ul className="list-disc pl-5 mt-2">
+                <li>
+                  Led the platform from greenfield architecture through
+                  production, defining core backend systems, database design,
+                  and API standards.
                 </li>
                 <li>
-                  Designed and developed customisable marketplace subsystem that
-                  empowered clients to tailor promotional content, resulting in
-                  a 200% increase in traffic within one week.
+                  Built banking and ASIC integrations supporting compliant
+                  financial and share registry workflows.
                 </li>
                 <li>
-                  Successfully launched vcex.com.au 2 months ahead of schedule
-                  by optimising development workflows through DevOps practices
-                  and improving project prioritisation.
+                  Led and mentored a small engineering team while maintaining
+                  delivery quality and engineering standards.
                 </li>
               </ul>
             </div>
@@ -149,9 +215,8 @@ export default function Home() {
               </div>
               <ul className="list-disc pl-5">
                 <li>
-                  Quickly familiarised with project code and team, efficiently
-                  resolved software issues in collaboration with the team, and
-                  completed the project release one week ahead of schedule.
+                  Contributed to a React Native mobile application and helped
+                  resolve production issues ahead of release.
                 </li>
               </ul>
             </div>
@@ -168,8 +233,8 @@ export default function Home() {
               </div>
               <ul className="list-disc pl-5">
                 <li>
-                  Worked closely with the team leader, developed the WordPress
-                  theme with a new design.
+                  Developed a custom WordPress theme and responsive frontend
+                  components based on new design requirements.
                 </li>
               </ul>
             </div>
@@ -186,49 +251,35 @@ export default function Home() {
               </div>
               <ul className="list-disc pl-5">
                 <li>
-                  Developed a monitoring project for keyword comments that
-                  automatically notified relevant individuals by email and SMS,
-                  increasing user satisfaction by 15%.
-                </li>
-                <li>
-                  Simplified advertisement configuration for different client
-                  devices, saving 35% of time.
-                </li>
-                <li>
-                  Conducted dynamic analysis of stocks, providing enhanced
-                  information services to special clients.
+                  Built backend services and workflow systems for financial
+                  information platforms, including monitoring, notifications,
+                  and multi-client operations.
                 </li>
               </ul>
             </div>
             <div className="relative ">
               <span className=" absolute w-4 h-4 bg-blue-500 rounded-full -left-6 top-0"></span>
-              <p className=" text-blue-500 font-bold">June 2015 – May 2016</p>
+
+              <p className=" text-blue-500 font-bold">March 2015 – May 2016</p>
+
               <p>JR Tech Co</p>
-              <p>Team Leader</p>
+
+              <p>Frontend Developer → Team Leader</p>
+
               <div className=" flex mb-2">
                 <LocationIcon className=" w-6 h-6" />
                 <span>Harbin, China</span>
               </div>
+
               <ul className="list-disc pl-5">
                 <li>
-                  Led the construction management system project, reducing
-                  development time by 20% and helping clients save 12% in costs.
+                  Progressed from frontend development into a technical
+                  leadership role while contributing to enterprise web
+                  applications.
                 </li>
-              </ul>
-            </div>
-            <div className="relative ">
-              <span className=" absolute w-4 h-4 bg-blue-500 rounded-full -left-6 top-0"></span>
-              <p className=" text-blue-500 font-bold">March 2015 – June 2015</p>
-              <p>JR Tech Co</p>
-              <p>Frontend Developer</p>
-              <div className=" flex mb-2">
-                <LocationIcon className=" w-6 h-6" />
-                <span>Harbin, China</span>
-              </div>
-              <ul className="list-disc pl-5">
                 <li>
-                  Designed and coded a products presentation web project,
-                  increasing product visibility by 40%.
+                  Led development of a construction management system for
+                  enterprise clients.
                 </li>
               </ul>
             </div>

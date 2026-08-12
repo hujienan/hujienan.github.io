@@ -7,9 +7,9 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jet Hu - Fullstack Developer | UpUpStudy Creator",
+  title: "Jet Hu | Senior Full-Stack Engineer & Tickeasy Founder",
   description:
-    "Explore Jet Hu's portfolio as a fullstack developer and discover UpUpStudy, the online education platform created by Jet. Learn more about Jet's projects, work experience, and insights into technology and development.",
+    "Senior full-stack engineer with 10+ years of experience building production software. Founder and engineer behind Tickeasy, an Australian event ticketing and operations platform.",
 };
 
 export default function RootLayout({
